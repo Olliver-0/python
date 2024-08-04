@@ -1,14 +1,14 @@
 n = int(input('Digite um número: '))
-primo = True
-for c in range(2, n):
-    if n <= 1:
-        primo = False
+tot = 0
+for c in range(1, (n + 1)):
+    if n % c == 0:
+        print('\033[33m', end = ' ')
+        tot += 1
     else:
-        if n % c == 0:
-            primo = False
-        else:
-            primo = True
-if primo == True:
-    print('Este número é primo')
+        print('\033[31m', end = ' ')
+    print('{}'.format(c), end = ' ')
+print('\n\033[mO número {} foi divisível {} vezes'.format(n, tot))
+if tot == 2:
+    print('E por isso ele É PRIMO!')
 else:
-    print('Este número não é primo')
+    print('E por isso ele NÃO É PRIMO')

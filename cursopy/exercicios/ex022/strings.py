@@ -5,8 +5,6 @@ print(frase[3:13]) #Da terceira até a décima terceira letra, excluindo a déci
 
 print(frase[:13]) #Do início até o 13.
 
-print(frase[3:13])
-
 print(frase[13:]) #Do 13 até o final
 
 print(frase[1:15:2]) #Da 1 até 15 pulando de 2 em 2, sempre pegando pulo 2.
