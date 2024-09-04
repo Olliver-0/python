@@ -14,6 +14,10 @@ while escolha != num:
     print('PROCESSANDO...')
     sleep(2)
     if escolha != num:
-        print('Errado! Tente novamente.')
+        print('Errado!')
+        if escolha < num:
+            print('É mais... Tente novamente')
+        elif escolha > num:
+            print('É menos... Tente novamente')
     c += 1
 print('Parabéns, você acertou! Você precisou de {} tentaivas'.format(c))
