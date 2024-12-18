@@ -3,6 +3,4 @@ times = ('Botafogo', 'Palmeiras', 'Flamengo', 'Fortaleza', 'Internacional', 'Sã
 print(times[:5])
 print(times[16:20])
 print(sorted(times))
-for c, t in enumerate(times):
-    if t == 'Cruzeiro':
-        print(c + 1)
+print(times.index('Cruzeiro') + 1)

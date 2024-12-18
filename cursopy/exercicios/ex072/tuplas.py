@@ -23,11 +23,14 @@
 # print(pessoa)
 # del(pessoa)
 
-nums = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20)
 extenso = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
 
-num = int(input('Digite um número entre 0 e 20: '))
-while num < 0 or num > 20:
-    num = int(input('Tente novamente. Digite um número entre 0 e 20: '))
+while True:
+    num = int(input('Digite um número entre 0 e 20: '))
+    while num < 0 or num > 20:
+        num = int(input('Tente novamente. Digite um número entre 0 e 20: '))
 
-print(f'Você digitou o número {extenso[nums[num]]}')
+    print(f'Você digitou o número {extenso[num]}')
+    continuar = str(input('Quer continuar? [s/n]')).strip().lower()
+    if continuar == 'n':
+        break
