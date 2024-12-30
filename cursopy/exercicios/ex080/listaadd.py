@@ -1,14 +1,13 @@
-num = []
-
-while True:
+lista = []
+for c in range(0, 5):
     n = int(input('Digite um valor: '))
-    if n not in num:
-        num.append(n)
-        print('Valor adicionado com sucesso...')
+    if c == 0 or n > lista[-1]:
+        lista.append(n)
     else:
-        print('Valor duplicado! Não vou adicionar...')
-    r = str(input('Quer continuar? [S/N]: ')).strip()
-    if r in 'Nn':
-        break
-num.sort()
-print(f'Você digitou os valores {num}')
+        pos = 0
+        while pos < len(lista):
+            if n <= lista[pos]:
+                lista.insert(pos, n)
+                break
+            pos += 1
+print(f'Os valores digitados em ordem foram {lista}')
